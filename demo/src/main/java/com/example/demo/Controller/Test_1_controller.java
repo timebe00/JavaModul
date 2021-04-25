@@ -17,6 +17,7 @@ public class Test_1_controller {
     @Autowired
     private Test_1_Service service;
 
+    //  값 집어 넣기
     @GetMapping("/input")
     public ResponseEntity input_test() throws Exception {
         log.info("input_test");
@@ -28,6 +29,7 @@ public class Test_1_controller {
         return new ResponseEntity(HttpStatus.OK);
     }
 
+    //  값 조회하기
     @GetMapping("/select")
     public ResponseEntity<List<Test_Mongo_1>> select_test() throws Exception {
         log.info("select_test");
@@ -38,6 +40,7 @@ public class Test_1_controller {
         return new ResponseEntity<>(list, HttpStatus.OK);
     }
 
+    //  값 고치기
     @GetMapping("/update")
     public ResponseEntity update_test() throws Exception {
         log.info("update_test");
@@ -48,6 +51,7 @@ public class Test_1_controller {
         return new ResponseEntity(HttpStatus.OK);
     }
 
+    //  값 지우기
     @GetMapping("/delete")
     public ResponseEntity delete_test() throws Exception {
         log.info("delete_test");
